@@ -1,14 +1,13 @@
-import Transaction from './components/transactions/Transaction';
-import TRANSACTION_DATA from './api/mock_data';
+// src/App.jsx
+import TransactionList from './components/transactions/TransactionList'; // 👈 1
+import PlacesList from './components/places/PlacesList';
 
 function App() {
   return (
-    <div className='App'>
-      {TRANSACTION_DATA.map((trans) => (
-        <Transaction {...trans} />
-      ))}
+    <div>
+      <TransactionList /> {/* 👈 2 */}
+      <PlacesList />
     </div>
   );
 }
-
 export default App;
